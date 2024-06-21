@@ -6,7 +6,7 @@ import StaffHome from './StaffHome';
 import StaffSettings from './StaffSettings';
 import StaffRepairHistory from './StaffRepairHistory';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTableColumns, faChartSimple, faClipboard, faBrush, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faTableColumns, faChartSimple, faClipboard, faGear } from '@fortawesome/free-solid-svg-icons';
 import StaffHelp from './StaffHelp';
 const StaffDashboardWithLayout: React.FC = function () {
   const location = useLocation()
