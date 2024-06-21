@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../ThemeContex';
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTableColumns, faChartSimple, faClipboard, faBrush, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faTableColumns, faChartSimple, faClipboard,  faGear } from '@fortawesome/free-solid-svg-icons';
 import SubAdminHome from "./SubAdminHome"
 
 
