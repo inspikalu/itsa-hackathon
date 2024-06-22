@@ -6,7 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const SubAdminRepairHistory: React.FC = function () {
   const { darkMode } = useContext(ThemeContext);
 
-  const [repairs, setRepairs] = useState([
+    const [repairs] = useState([
     { deviceId: '1212121', staffName: 'Okereke Clement', dateReported: '20th June 2015', issue: 'Broken Screen', technician: 'Technique James', status: 'Closed', priority: 'medium' },
     { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
     { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
@@ -17,6 +17,18 @@ const SubAdminRepairHistory: React.FC = function () {
     { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
     // Add more repair records as needed
   ]);
+
+  // const [repairs, setRepairs] = useState([
+  //   { deviceId: '1212121', staffName: 'Okereke Clement', dateReported: '20th June 2015', issue: 'Broken Screen', technician: 'Technique James', status: 'Closed', priority: 'medium' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   { deviceId: '1212122', staffName: 'John Doe', dateReported: '15th June 2015', issue: 'Battery Issue', technician: 'Technique Jane', status: 'In Progress', priority: 'high' },
+  //   // Add more repair records as needed
+  // ]);
 
   const [selectedRepair, setSelectedRepair] = useState<any>(null);
   const [searchTerm, setSearchTerm] = useState("");
