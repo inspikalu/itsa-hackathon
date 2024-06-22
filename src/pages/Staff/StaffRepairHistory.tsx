@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 
 const StaffRepairHistory: React.FC = () => {
-  const [repairs, setRepairs] = useState([
+ /**
+  * 
+  *  const [repairs, setRepairs] = useState([
+    { date: '2024-06-01', device: 'Laptop', issue: 'Screen flickering', status: 'Fixed' },
+    { date: '2024-05-15', device: 'Printer', issue: 'Paper jam', status: 'Pending' },
+    // Add more repair records as needed
+  ]);
+  */
+
+  const [repairs] = useState([
     { date: '2024-06-01', device: 'Laptop', issue: 'Screen flickering', status: 'Fixed' },
     { date: '2024-05-15', device: 'Printer', issue: 'Paper jam', status: 'Pending' },
     // Add more repair records as needed

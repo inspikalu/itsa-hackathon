@@ -7,6 +7,7 @@ import SubAdminHome from "./SubAdminHome"
 import SubAdminRepairHistory from "./SubAdminRepairHistory";
 import SubAdminHelp from './SubAdminHelp';
 import SubAdminSettings from './SubAdminSettings';
+import SubAdminStaffs from './SubAdminStaffs';
 
 const SubAdminLayout: React.FC = function () {
 
@@ -21,6 +22,7 @@ const SubAdminLayout: React.FC = function () {
           <div className={`sm:h-full md:h-auto`}>
             <ul className={`w-full sm:h-full flex flex-row md:flex-col items-center md:items-start justify-center md:justify-start h-full gap-4 navLinks`}>
               <NavLink to="/sub/admin" className={`${location.pathname === "/sub/admin" ? "activeLink" : ""} w-auto md:w-full`} ><li className=' text-responsive cursor-pointer hover:bg-blue-400 sm:flex sm:flex-col md:block'><FontAwesomeIcon icon={faTableColumns} /> &nbsp;Dashboard</li></NavLink>
+              <NavLink to="/sub/admin/staffs" className={`${location.pathname === "/sub/admin/staffs" ? "activeLink" : ""} w-auto md:w-full`}><li className='text-responsive cursor-pointer hover:bg-blue-400 sm:flex sm:flex-col md:block'><FontAwesomeIcon icon={faChartSimple} />&nbsp; Staffs</li></NavLink>
               <NavLink to="/sub/admin/repairs" className={`${location.pathname === "/sub/admin/repairs" ? "activeLink" : ""} w-auto md:w-full`}><li className='text-responsive cursor-pointer hover:bg-blue-400 sm:flex sm:flex-col md:block'><FontAwesomeIcon icon={faChartSimple} />&nbsp; Repair History</li></NavLink>
               <NavLink to="/sub/admin/help" className={`${location.pathname === "/sub/admin/help" ? "activeLink" : ""} w-auto md:w-full`}><li className='text-responsive cursor-pointer hover:bg-blue-400 sm:flex sm:flex-col md:block'><FontAwesomeIcon icon={faClipboard} />&nbsp; Help and support</li></NavLink>
               {/* <NavLink  to="/staff"><li className='text-responsive cursor-pointer hover:bg-blue-400'><FontAwesomeIcon icon={faBrush} /> &nbsp;Maintenance</li></NavLink> */}
@@ -34,6 +36,7 @@ const SubAdminLayout: React.FC = function () {
             <Route path='/repairs' element={<SubAdminRepairHistory />} />
             <Route path='/help' element={<SubAdminHelp />} />
             <Route path='/settings' element={<SubAdminSettings />} />
+            <Route path='/staffs' element={<SubAdminStaffs />} />
           </Routes>
         </div>
       </div>
