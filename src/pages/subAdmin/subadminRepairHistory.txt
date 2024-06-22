@@ -1,0 +1,131 @@
+
+
+
+import React, { useContext } from "react";
+import { ThemeContext } from "../../ThemeContex";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
+
+const SubAdminRepairHistory: React.FC = function () {
+	const { darkMode } = useContext(ThemeContext)
+	return (<>
+		<div className="p-6">
+			<h2 className="text-2xl font-bold">Repairs and Management History</h2>
+			<div className={`search ${darkMode && "text-black"} bg-white max-w-[25%] flex justify-start items-center gap-3 p-3 rounded-md my-3`}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        <input type="search" placeholder='Search Request' className={`bg-transparent w-full focus:outline-none`} />
+                    </div>
+
+			<table className={`w-full ${darkMode && "bg-blue-900"} text-left border-collapse my-3`}>
+				<thead className='bg-gray-700 text-white'>
+					<tr>
+						<th className='p-3 border-b border-gray-600'>Device ID</th>
+						<th className='p-3 border-b border-gray-600'>Staff name</th>
+						<th className='p-3 border-b border-gray-600'>Date reported</th>
+						<th className='p-3 border-b border-gray-600'>Issue/Problem description</th>
+						<th className='p-3 border-b border-gray-600'>Technician assigned</th>
+						<th className='p-3 border-b border-gray-600'>Status</th>
+						<th className='p-3 border-b border-gray-600'>Priority level</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+					<tr>
+						<td>1212121</td>
+						<td>Okereke Clement</td>
+						<td>20th June 2015</td>
+						<td>Broken Screen</td>
+						<td>Technique James</td>
+						<td>Closed</td>
+						<td>medium</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</>)
+}
+
+export default SubAdminRepairHistory;
+

@@ -1,25 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-const StaffHelp:React.FC = () => {
+
+interface HelpAndSupportProps {}
+
+const SubAdminHelp: React.FC<HelpAndSupportProps> = function () {
   const [activeFaqIndex, setActiveFaqIndex] = React.useState<number>(0);
 
   const handleFaqClick = (index: number) => {
     setActiveFaqIndex(index === activeFaqIndex ? -1 : index); // Toggle open/close
   };
 
-	return (
-	<>
-{/* Header */}
-      <header className="bg-blue-950 shadow-md">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold leading-tight text-white">Help and Support</h1>
-        </div>
-      </header>
-
+  return (
     <div className="container mx-auto px-8 py-8">
-	
-
       {/* Search Bar */}
       <div className="mb-4 flex items-center justify-start gap-1 bg-gray-100 p-3 rounded-md">
       <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -34,7 +27,7 @@ const StaffHelp:React.FC = () => {
       <div className="mb-8">
         <h2 className="text-xl font-medium mb-2">Frequently Asked Questions</h2>
         <div>
-          {['How do i add a new device?', 'Does my company cover my personal devices?', /* Add more FAQ questions here */].map(
+          {['What is a sub admin?', 'How do I create a new staff account?', /* Add more FAQ questions here */].map(
             (question, index) => (
               <div key={question} className="mb-4">
                 <button
@@ -51,12 +44,12 @@ const StaffHelp:React.FC = () => {
                     <p>
                       {index === 0 && (
                         <span>
-                          You will have to contact your organization's IT department to assign a new device to you
+                          A sub admin is a user within an organization who has been granted permission to manage staff accounts, devices, and maintenance requests.
                         </span>
                       )}
                       {index === 1 && (
                         <span>
-                          No, ITSA only covers company devices.
+                          To create a new staff account, navigate to the "Staff Management" section and click "Create Staff Account." Fill in the required information, such as name, email address, and assigned devices. You can also set permissions for the new staff member.
                         </span>
                       )}
                     </p>
@@ -104,8 +97,7 @@ const StaffHelp:React.FC = () => {
 
       {/* Subheadings can be added within sections as needed */}
     </div>
-</>
   );
-}
+};
 
-export default StaffHelp
+export default SubAdminHelp;

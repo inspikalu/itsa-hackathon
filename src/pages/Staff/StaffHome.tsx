@@ -37,7 +37,7 @@ const StaffHome: React.FC = function () {
                 <div className="w-full h-4 p-4 mt-4 flex items-center justify-between">
                     <div className={`search ${darkMode && "text-black"} bg-white max-w-[25%] flex justify-start items-center gap-3 p-2 rounded-md`}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        <input type="search" placeholder='Search Device' className={`bg-transparent w-full`} />
+                        <input type="search" placeholder='Search Device' className={`bg-transparent w-full focus:outline-none`} />
                     </div>
 
                     <div className="icons flex items-center justify-center gap-3">
@@ -53,22 +53,22 @@ const StaffHome: React.FC = function () {
                 </div>
 
                 <div className='flex items-center justify-center  gap-3 p-5'>
-                    <div className="w-[25%] aspect-9-5 bg-blue-400 rounded-md flex flex-col items-start p-5 gap-1">
+                    <div className="w-[25%] aspect-9-5 bg-blue-500 rounded-md flex flex-col items-start p-5 gap-1">
                         <FontAwesomeIcon icon={faHardDrive} size='2x' className='mb-2'/>
                         <span className='mt-auto'>2</span>
                         <span>Assigned Devices</span>
                     </div>
-                    <div className="w-[25%] aspect-9-5 bg-pink-400 rounded-md flex flex-col items-start p-5 gap-1">
+                    <div className="w-[25%] aspect-9-5 bg-red-500 rounded-md flex flex-col items-start p-5 gap-1">
                         <FontAwesomeIcon icon={faCloudSun} size='2x' className='mb-2'/>
                         <span className='mt-auto'>2</span>
                         <span>Devices at risk</span>
                     </div>
-                    <div className="w-[25%] aspect-9-5 bg-purple-400 rounded-md flex flex-col items-start p-5 gap-1">
+                    <div className="w-[25%] aspect-9-5 bg-green-500 rounded-md flex flex-col items-start p-5 gap-1">
                     <FontAwesomeIcon icon={faHourglassHalf} size='2x'  className='mb-2'/>
                         <span className='my-auto'>1</span>
                         <span>Pending Requests</span>
                     </div>
-                    <div className="w-[25%] aspect-9-5 bg-white rounded-md flex flex-col items-start p-5 gap-1"></div>
+                    <div className="w-[25%] aspect-9-5 bg-blue-100 text-gray-800 rounded-md flex flex-col items-start p-5 gap-1"></div>
                 </div>
 
                 <div className='bg-blue-950 rounded-md w-[97%] mx-auto p-5'>

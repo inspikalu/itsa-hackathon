@@ -1,0 +1,60 @@
+Given the features you've outlined for the Super Admin page, the Navbar should have links that provide easy access to each of these core functionalities. Here are the recommended links for the Navbar:
+
+Dashboard
+
+Overview of system statistics
+Quick access to key metrics and notifications
+Organizational Management
+
+Create Organization
+Manage Organizations
+Assign Sub-Admins
+User Management
+
+Create Staff Accounts
+Edit Staff Accounts
+Remove Staff Accounts
+Assign Devices to Staff
+Escalate Issues
+Technician Management
+
+Manage Technician Accounts
+Assign Technicians to Requests
+Maintenance Requests
+
+View All Requests
+Edit Requests
+Change Request Priority
+Assign Requests to Technicians
+Device Management
+
+Create Device Records
+Edit Device Records
+Remove Device Records
+Assign Devices to Staff
+Track Device Location
+Finance Management
+
+Manage Transactions
+Handle Insurance Claims
+Process Payments
+Reporting and Analytics
+
+View Reports
+Generate Statistics
+Monitor Technician Performance
+Security and Access Control
+
+Manage Access Levels
+Monitor Security Incidents
+Configure Alerts and Notifications
+Settings and Configuration
+
+System Settings
+Notification Settings
+Preferences
+Profile Management
+
+View/Edit Profile
+Change Password
+These links will ensure that the Super Admin has quick and efficient access to all the necessary functions needed to manage the ITSA system effectively. Each link should lead to a dedicated section where detailed operations can be performed, enhancing usability and operational efficiency.
