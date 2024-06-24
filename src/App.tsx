@@ -26,7 +26,7 @@ const App: React.FC = function () {
             </p>
             <div className='w-[80%] my-3 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 ' >
               <button className="p-2 rounded-md border-2 border-blue-600 bg-blue-600 text-white" onClick={() => { setIsModalOpen(true); setValueShowing(EModalShowing.first) }}>
-                Sign  Up</button>
+                Sign  Up Your Organization</button>
               <button className={`p-2 rounded-md border-2 border-blue-600 bg-white-500 ${darkMode ? "text-white" : "text-blue-600"} `} onClick={() => { setIsModalOpen(true); setValueShowing(EModalShowing.second) }}>Admin Log in</button>
               <button className={`p-2 rounded-md border-2 border-blue-600 bg-white-500 ${darkMode ? "text-white" : "text-blue-600"} `} onClick={() => { setIsModalOpen(true); setValueShowing(EModalShowing.third) }}>Staff Login</button>
             </div>
