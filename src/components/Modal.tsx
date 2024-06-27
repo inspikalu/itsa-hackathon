@@ -124,7 +124,8 @@ const Modal: React.FC<IModalProps> = function ({ isOpen, setIsOpen, valueShowing
             localStorage.setItem('token', JSON.stringify(response.data.token))
             localStorage.setItem('role', "sub-admin")
             setIsLoading(false)
-            navigate('/sub/admin')
+		alert("Go back and sign in as sub admin")
+            //navigate('/sub/admin')
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 setIsLoading(false)
