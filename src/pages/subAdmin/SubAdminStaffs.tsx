@@ -8,7 +8,8 @@ const SubAdminStaffs: React.FC = function () {
 
   const navigate = useNavigate()
   const [token, setToken] = useState<string | null>(null);
-  const [orgId, setOrgId] = useState("");
+  // const [orgId, setOrgId] = useState("");
+  const [, setOrgId] = useState("");
   const [staffList, setStaffList] = useState<any[]>([])
   const [isErrorPopover, setIsErrorPopover] = useState(true)
   const [isNotificationShowing, setIsNotificationShowing] = useState(false)

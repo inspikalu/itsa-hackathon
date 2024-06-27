@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../ThemeContex';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faBell, faUserShield, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faUserShield, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const AdminSettings: React.FC = function() {
     const { darkMode } = useContext(ThemeContext);

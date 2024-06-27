@@ -329,7 +329,7 @@ const SubAdminHome: React.FC = function () {
     }
 
 
-    const handleDownloadDriver = async () => {
+   /* const handleDownloadDriver = async () => {
         const userAgent = navigator.userAgent;
         let os = '';
 
@@ -360,7 +360,7 @@ const SubAdminHome: React.FC = function () {
         } catch (error) {
             console.error('Error downloading driver:', error);
         }
-    };
+    };*/
 
 
 

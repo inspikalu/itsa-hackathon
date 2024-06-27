@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { apiUrl } from "../../url";
 import { useNavigate } from 'react-router-dom';
+import Notification from "../../components/Notification";
 
 enum Days{
   "Monday" = 1,
@@ -41,21 +42,13 @@ const SubAdminRepairHistory: React.FC = function () {
   const [notificationMessage, setNotificationMessage] = useState('');
   const [isNotificationShowing, setIsNotificationShowing] = useState(false);
   const [isErrorPopover, setIsErrorPopover] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const [requestList, setRequestList] = useState<any[]>([])
 
   const navigate = useNavigate()
   const [token, setToken] = useState<string | null>(null);
-  const [orgId, setOrgId] = useState("");
-
-  const options: Intl.DateTimeFormatOptions = {
-    weekday: 'long', // Full name of the day of the week
-    day: 'numeric',  // Day of the month as a numeric value
-    month: 'long',   // Full name of the month
-  };
-
-  // Format the date according to the options
-  const dateFormatter = new Intl.DateTimeFormat('en-GB', options);
+  // const [orgId, setOrgId] = useState("");
+  const [, setOrgId] = useState("");
   const fetchRequestListforEdit = async function () {
     try {
       const response = await axios.get(`${apiUrl}/subadmin/requests`, {
@@ -158,6 +151,8 @@ const SubAdminRepairHistory: React.FC = function () {
 
 
   return (
+    <>
+    <Notification isShowing={isNotificationShowing} message={notificationMessage} error={isErrorPopover}/>
     <div className="p-6">
       <h2 className="text-2xl font-bold">Repairs and Management History</h2>
 
@@ -282,6 +277,7 @@ const SubAdminRepairHistory: React.FC = function () {
         </div>
       )}
     </div>
+    </>
   );
 };
 
