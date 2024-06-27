@@ -1,15 +1,47 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SubAdminSettings: React.FC = function () {
+  const navigate = useNavigate()
   const [editMode, setEditMode] = useState(false);
   const [editCompanyMode, setEditCompanyMode] = useState(false)
 
   const toggleEditMode = () => {
     setEditMode(!editMode);
   };
-  const toggleEditCompanyMode=()=>{
+  const toggleEditCompanyMode = () => {
     setEditCompanyMode(!editCompanyMode)
   }
+
+
+  const [token, setToken] = useState<string | null>(null);
+  const [orgId, setOrgId] = useState("");
+  console.log(token, orgId)
+  React.useEffect(() => {
+    try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        navigate('/');
+        return;
+      }
+      let parsedToken: string = JSON.parse(token);
+      setToken(parsedToken);
+      const role = localStorage.getItem("role")
+      if (role !== "sub-admin") {
+        navigate("/")
+        return;
+      }
+      const orgId = localStorage.getItem('orgId');
+      if (orgId) setOrgId(JSON.parse(orgId))
+      else {
+        navigate('/');
+        return;
+      }
+
+    } catch (error) {
+      console.log(error);
+    }
+  }, [navigate])
 
   // Profile Management section
   const [name, setName] = useState('John Doe');
@@ -46,7 +78,7 @@ const SubAdminSettings: React.FC = function () {
       <h2 className="text-2xl mb-4">Settings</h2>
 
       {/* Profile Management */}
-      <div className="setting-section bg-white rounded-lg shadow-md p-4 mb-6">
+      <div className="setting-section bg-blue-950 rounded-lg shadow-md p-4 mb-6">
         <h3 className="text-lg mb-2">Profile</h3>
         {editMode ? (
           <form onSubmit={handleProfileUpdate}>
@@ -103,15 +135,15 @@ const SubAdminSettings: React.FC = function () {
       </div>
 
       {/* Organization Management (limited) */}
-      <div className="setting-section bg-white rounded-lg shadow-md p-4 mb-6">
+      <div className="setting-section bg-blue-950 rounded-lg shadow-md p-4 mb-6">
         <h3 className="text-lg mb-2">Organization</h3>
         {!editCompanyMode && (<><p className="mb-2">Name: {organizationName}</p>
-        <button
-          onClick={() => setEditCompanyMode(!editCompanyMode)}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          Edit Name
-        </button> </>)
+          <button
+            onClick={() => setEditCompanyMode(!editCompanyMode)}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Edit Name
+          </button> </>)
         }
         {editCompanyMode && (
           <form onSubmit={handleOrganizationUpdate} className="mt-4">
@@ -145,7 +177,7 @@ const SubAdminSettings: React.FC = function () {
       </div>
 
       {/* Notification Preferences */}
-      <div className="setting-section bg-white rounded-lg shadow-md p-4">
+      <div className="setting-section bg-blue-950 rounded-lg shadow-md p-4">
         <h3 className="text-lg mb-2">Notification Preferences</h3>
         <div className="preference">
           <label htmlFor="receiveMaintenanceNotifications" className="flex items-center">
@@ -160,6 +192,7 @@ const SubAdminSettings: React.FC = function () {
           </label>
         </div>
       </div>
+      <button className="p-3 rounded-md bg-red-600 my-4" onClick={() => { localStorage.removeItem('token'); localStorage.removeItem('role'); navigate('/') }}>Log out</button>
     </div>
   );
 };

@@ -31,7 +31,7 @@ const SubAdminHelp: React.FC<HelpAndSupportProps> = function () {
             (question, index) => (
               <div key={question} className="mb-4">
                 <button
-                  className={`w-full text-left font-medium text-gray-700 bg-gray-100 rounded px-4 py-2 hover:bg-gray-200 focus:outline-none ${
+                  className={`w-full text-left font-medium text-white bg-blue-950 rounded px-4 py-2 hover:bg-blue-900 focus:outline-none ${
                     activeFaqIndex === index ? 'border-b border-blue-500' : ''
                   }`}
                   type="button"
@@ -40,7 +40,7 @@ const SubAdminHelp: React.FC<HelpAndSupportProps> = function () {
                   {question} {activeFaqIndex !== index ? <FontAwesomeIcon icon={faChevronDown} className="ml-2 text-gray-400" />: <FontAwesomeIcon icon={faChevronUp} className="ml-2 text-gray-400" />}
                 </button>
                 {activeFaqIndex === index && (
-                  <div className="p-4 text-gray-600 pl-8">
+                  <div className="p-4 text-gray-200 pl-8">
                     <p>
                       {index === 0 && (
                         <span>
