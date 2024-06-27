@@ -125,6 +125,7 @@ const Modal: React.FC<IModalProps> = function ({ isOpen, setIsOpen, valueShowing
             localStorage.setItem('role', "sub-admin")
             setIsLoading(false)
 		alert("Go back and sign in as sub admin")
+	    setIsOpen(!isOpen)
             //navigate('/sub/admin')
         } catch (error) {
             if (axios.isAxiosError(error)) {
